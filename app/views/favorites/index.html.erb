@@ -1,0 +1,9 @@
+<h1>Favorites#index</h1>
+<p>Find me in app/views/favorites/index.html.erb</p>
+<% @favorites.each do |favorite| %>
+  <p>
+    <%= form_for :favor, url: create_favor_path(favorite.id) do |f| %>
+      <%= favorite.title %> <%= f.submit "Favor" %>
+    <% end %>
+  </p>
+<% end %>

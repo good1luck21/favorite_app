@@ -1,0 +1,5 @@
+<h1><%= @user.name %></h1>
+<p>Find me in app/views/users/show.html.erb</p>
+<% @user.favorites.each do |favorite| %>
+  <p><%= favorite.base_favorite.title %></p>
+<% end %>
